@@ -23,11 +23,11 @@ public class AuthorizationServerConfig
     /**
      * Client Id is the user name for the client application. It is read from the environment variable OAUTHCLIENTID
      */
-
+        //postgres://spkozelvluekdu:a69be4e3c89aeb40075ac4e9c629bfe8540fd6302807fff4a297199a7b60de4c@ec2-52-87-135-240.compute-1.amazonaws.com:5432/d3ipdprjn0o4lp
         //username for frontend app
-        static final String CLIENT_ID = "lambda-id";
+        static final String CLIENT_ID = System.getenv("OAUTHCLIENTID");
         //password for frontend app
-        static final String CLIENT_SECRET = "lambda-secret";
+        static final String CLIENT_SECRET = System.getenv("OAUTHCLIENTSECRET");
         //thing needed to gain auth
         static final String GRANT_TYPE_PASSWORD = "password";
 
